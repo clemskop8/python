@@ -45,13 +45,11 @@ class MainWindow(QMainWindow):
         self.note_window = None
 
     def new_note(self):
-        """Открывает новое окно для создания заметки."""
         if self.note_window is None or not self.note_window.isVisible():
             self.note_window = NoteWindow()
             self.note_window.show()
 
     def save_note(self):
-        """Сохраняет заметку в файл."""
         if self.note_window is None:
             return
         
